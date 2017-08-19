@@ -29,7 +29,7 @@ sudo apt-get install vim
 wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
 ````
 
-### 实时系统信息显示
+### indicator-sysmonitor(实时系统信息显示)
 ````
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get update
