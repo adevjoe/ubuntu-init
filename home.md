@@ -88,3 +88,10 @@ cd autojump
 复制提示的信息到.zshrc
 
 ```
+
+### systemback
+```
+sudo add-apt-repository ppa:nemh/systemback
+sudo apt-get update
+sudo apt-get install systemback
+```
