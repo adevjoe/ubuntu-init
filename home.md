@@ -60,3 +60,38 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt-get update
 sudo apt-get install albert
 ````
+### 搜狗输入法
+```
+http://pinyin.sogou.com/linux/
+```
+
+### terminator+ on-my-zsh +autojump
+```
+// 安装terminator
+sudo apt-get install terminator
+
+
+// 安装zsh：
+
+sudo apt-get install zsh安装zsh
+zsh --version确认是否安装成功
+sudo chsh -s $(which zsh)设置zsh为默认shell
+注销重新登录
+
+//安装Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+// 安装autojump
+git clone git://github.com/joelthelion/autojump.git
+cd autojump
+./install.sh
+复制提示的信息到.zshrc
+
+```
+
+### systemback
+```
+sudo add-apt-repository ppa:nemh/systemback
+sudo apt-get update
+sudo apt-get install systemback
+```
