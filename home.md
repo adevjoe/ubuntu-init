@@ -86,6 +86,7 @@ git clone git://github.com/joelthelion/autojump.git
 cd autojump
 ./install.sh
 复制提示的信息到.zshrc
+source .zshrc
 
 ```
 
