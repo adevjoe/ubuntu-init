@@ -104,3 +104,6 @@ sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources
 sudo apt-get update
 sudo apt-get install playonlinux
 ````
+### 娱乐软件
+
+- 视频播放器 SMPlayer
