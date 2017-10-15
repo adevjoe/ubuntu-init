@@ -7,16 +7,12 @@
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 # 修改为阿里云的镜像源
 cat > /etc/apt/sources.list << END
-deb http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted universe multiverse 
-deb http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted universe multiverse 
-deb-src http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
 END
 
 # 更新源列表信息
