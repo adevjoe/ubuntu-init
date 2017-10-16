@@ -3,6 +3,29 @@
 
 系统设置 -> 软件和更新 -> 下载至  改为 http://mirrors.aliyun.com/ubuntu
 
+```bash
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+# 修改为阿里云的镜像源
+cat > /etc/apt/sources.list << END
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+END
+END
+
+# 更新源列表信息
+apt-get update
+```
+
+
+
 ### 更新
 ````
 sudo apt-get update
