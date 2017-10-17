@@ -3,6 +3,29 @@
 
 系统设置 -> 软件和更新 -> 下载至  改为 http://mirrors.aliyun.com/ubuntu
 
+```bash
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+# 修改为阿里云的镜像源
+cat > /etc/apt/sources.list << END
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+END
+END
+
+# 更新源列表信息
+apt-get update
+```
+
+
+
 ### 更新
 ````
 sudo apt-get update
@@ -86,6 +109,7 @@ git clone git://github.com/joelthelion/autojump.git
 cd autojump
 ./install.sh
 复制提示的信息到.zshrc
+source .zshrc
 
 ```
 
@@ -95,3 +119,14 @@ sudo add-apt-repository ppa:nemh/systemback
 sudo apt-get update
 sudo apt-get install systemback
 ```
+
+### playonlinux
+````
+wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
+sudo apt-get update
+sudo apt-get install playonlinux
+````
+### 娱乐软件
+
+- 视频播放器 SMPlayer
