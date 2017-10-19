@@ -110,8 +110,20 @@ cd autojump
 ./install.sh
 复制提示的信息到.zshrc
 source .zshrc
-
 ```
+#### On-My-Zsh 主题
+%n 用户名 %m 主机名
+```bash
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT='${ret_status}%n@%m %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+```
+
+
 
 ### systemback
 ```
