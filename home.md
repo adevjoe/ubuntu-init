@@ -4,6 +4,7 @@
 系统设置 -> 软件和更新 -> 下载至  改为 http://mirrors.aliyun.com/ubuntu
 
 ```bash
+备份
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 # 修改为阿里云的镜像源
 cat > /etc/apt/sources.list << END
