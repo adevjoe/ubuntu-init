@@ -68,13 +68,7 @@ sudo apt-get install oracle-java8-installer
 
 ### node
 ````
-sudo apt-get install nodejs-legacy
-sudo apt-get install npm
-sudo npm install -g nrm --registry=https://registry.npm.taobao.org
-nrm use taobao
-sudo npm install npm@latest -g
-sudo npm install -g n
-sudo n latest
+https://github.com/creationix/nvm  使用nvm安装
 ````
 
 ### albert
